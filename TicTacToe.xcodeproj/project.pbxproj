@@ -21,6 +21,7 @@
 		27E6EB7C1880862700FCB3AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27E6EB5E1880862700FCB3AF /* UIKit.framework */; };
 		27E6EB841880862700FCB3AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27E6EB821880862700FCB3AF /* InfoPlist.strings */; };
 		27E6EB861880862700FCB3AF /* TicTacToeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E6EB851880862700FCB3AF /* TicTacToeTests.m */; };
+		6DB4C2C61883535A00968B1A /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB4C2C51883535A00968B1A /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		27E6EB811880862700FCB3AF /* TicTacToeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TicTacToeTests-Info.plist"; sourceTree = "<group>"; };
 		27E6EB831880862700FCB3AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27E6EB851880862700FCB3AF /* TicTacToeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicTacToeTests.m; sourceTree = "<group>"; };
+		6DB4C2C41883535A00968B1A /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
+		6DB4C2C51883535A00968B1A /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		27E6EB601880862700FCB3AF /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				6DB4C2C41883535A00968B1A /* WebViewController.h */,
+				6DB4C2C51883535A00968B1A /* WebViewController.m */,
 				27E6EB691880862700FCB3AF /* AppDelegate.h */,
 				27E6EB6A1880862700FCB3AF /* AppDelegate.m */,
 				27E6EB6C1880862700FCB3AF /* Main.storyboard */,
@@ -252,6 +257,7 @@
 				27E6EB711880862700FCB3AF /* ViewController.m in Sources */,
 				27E6EB6B1880862700FCB3AF /* AppDelegate.m in Sources */,
 				27E6EB671880862700FCB3AF /* main.m in Sources */,
+				6DB4C2C61883535A00968B1A /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +384,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/Sonam/Desktop/Mobile\\ Makers",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TicTacToe/TicTacToe-Prefix.pch";
 				INFOPLIST_FILE = "TicTacToe/TicTacToe-Info.plist";
@@ -395,10 +397,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/Sonam/Desktop/Mobile\\ Makers",
-				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TicTacToe/TicTacToe-Prefix.pch";
 				INFOPLIST_FILE = "TicTacToe/TicTacToe-Info.plist";

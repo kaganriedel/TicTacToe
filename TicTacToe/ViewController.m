@@ -22,12 +22,10 @@
     __weak IBOutlet UILabel *myLabelTwo;
     __weak IBOutlet UILabel *myLabelOne;
     __weak IBOutlet UILabel *markerLabel;
-    CGAffineTransform transform;
     __weak IBOutlet UILabel *timerLabel;
+    CGAffineTransform transform;
     NSInteger counter;
     NSTimer *timer;
-  
-    
 }
 
 
@@ -46,13 +44,11 @@
 - (void)startCountdown
 {
     counter = 10;
-    
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                                       target:self
                                                     selector:@selector(countdownTimer:)
                                                     userInfo:nil
                                                      repeats:YES];
-    
 }
 
 - (void)countdownTimer:(NSTimer *)timer
@@ -70,7 +66,6 @@
 -(void) handleCountdownFinished
 {
     [self switchPlayer];
-    NSLog(@"Timer Finished!");
 }
 
 -(IBAction)onDrag:(UIPanGestureRecognizer *)panGestureRecognizer
@@ -100,9 +95,8 @@
             [self switchPlayer];
 
         
-        [UIView animateWithDuration:0.5f animations:^{markerLabel.transform = transform;
-        }];
-    }
+        [UIView animateWithDuration:0.5f animations:^{markerLabel.transform = transform;}];
+        }
     }
     else {
         
@@ -113,17 +107,11 @@
         
         }
     }
-    
 }
-
-
-
 
 -(UILabel *)findLabelUsingPoint:(CGPoint)point
 {
-   
     if (CGRectContainsPoint(myLabelOne.frame, point)) {
-
         if ([myLabelOne.text isEqualToString:@"X"] == NO && [myLabelOne.text isEqualToString:@"O"] == NO) {
             return myLabelOne;
             }
@@ -215,7 +203,6 @@
         return myLabelSeven.text;
     }
     return nil;
-    
 }
 
 
@@ -224,11 +211,13 @@
 {
     if ([whichPlayerLabel.text isEqualToString:@"Player 1"] == YES) {
         whichPlayerLabel.text = @"Player 2";
+        whichPlayerLabel.textColor = [UIColor blueColor];
         markerLabel.text = @"O";
         markerLabel.textColor = [UIColor blueColor];
     }
     else{
         whichPlayerLabel.text = @"Player 1";
+        whichPlayerLabel.textColor = [UIColor redColor];
         markerLabel.text = @"X";
         markerLabel.textColor = [UIColor redColor];
     }
@@ -240,36 +229,42 @@
 {
     if (buttonIndex == 0)
     {
-        myLabelOne.text = @"Ω";
-        myLabelOne.textColor = [UIColor blackColor];
-        myLabelTwo.text = @"Ω";
-        myLabelTwo.textColor = [UIColor blackColor];
-        myLabelThree.text = @"Ω";
-        myLabelThree.textColor = [UIColor blackColor];
-        myLabelFour.text = @"Ω";
-        myLabelFour.textColor = [UIColor blackColor];
-        myLabelFive.text = @"Ω";
-        myLabelFive.textColor = [UIColor blackColor];
-        myLabelSix.text = @"Ω";
-        myLabelSix.textColor = [UIColor blackColor];
-        myLabelSeven.text = @"Ω";
-        myLabelSeven.textColor = [UIColor blackColor];
-        myLabelEight.text = @"Ω";
-        myLabelEight.textColor = [UIColor blackColor];
-        myLabelNine.text = @"Ω";
-        myLabelNine.textColor = [UIColor blackColor];
+        [self newGame];
     }
-    
 }
 
+- (IBAction)onNewGameButtonPressed:(id)sender
+{
+    [self newGame];
+}
 
-
-
-
-
-
-
-
+-(void) newGame
+{
+    myLabelOne.text = @"Ω";
+    myLabelOne.textColor = [UIColor blackColor];
+    myLabelTwo.text = @"Ω";
+    myLabelTwo.textColor = [UIColor blackColor];
+    myLabelThree.text = @"Ω";
+    myLabelThree.textColor = [UIColor blackColor];
+    myLabelFour.text = @"Ω";
+    myLabelFour.textColor = [UIColor blackColor];
+    myLabelFive.text = @"Ω";
+    myLabelFive.textColor = [UIColor blackColor];
+    myLabelSix.text = @"Ω";
+    myLabelSix.textColor = [UIColor blackColor];
+    myLabelSeven.text = @"Ω";
+    myLabelSeven.textColor = [UIColor blackColor];
+    myLabelEight.text = @"Ω";
+    myLabelEight.textColor = [UIColor blackColor];
+    myLabelNine.text = @"Ω";
+    myLabelNine.textColor = [UIColor blackColor];
+    counter = 10;
+    timerLabel.text = [NSString stringWithFormat:@"%i", counter];
+    whichPlayerLabel.text = @"Player 1";
+    whichPlayerLabel.textColor = [UIColor redColor];
+    markerLabel.text = @"X";
+    markerLabel.textColor = [UIColor redColor];
+}
 
 - (void)didReceiveMemoryWarning
 {
